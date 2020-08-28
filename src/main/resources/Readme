@@ -1,0 +1,11 @@
+UPLOAD FILE URL : localhost:8080/upload
+                it will show download link also after uploading file
+DOWNLOAD FILE URL : localhost/download/{fileName}
+
+DELETE FILE URL: localhost:8081/delete/{filename}
+
+ i have used postman to hit endpoints urls 
+ 
+ files will be uploaded/downloaded/and deleted to path fileStorage
+
+
