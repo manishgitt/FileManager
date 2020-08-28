@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="DEBUG">
+    <Appenders>
+        <Console name="LogIntoConsole" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="LogIntoFile" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.assingment.file.Manager" level="debug" additivity="false">
+            <AppenderRef ref="LogIntoFile"/>
+            <AppenderRef ref="LogIntoConsole"/>
+        </Logger>
+        <Logger name="org.springframework.boot" level="error" additivity="false">
+            <AppenderRef ref="LogIntoConsole"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="LogIntoFile"/>
+            <AppenderRef ref="LogIntoConsole"/>
+        </Root>
+    </Loggers>
+</Configuration>
